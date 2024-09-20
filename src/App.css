@@ -1,0 +1,129 @@
+
+body{
+  background-color: #666;
+  padding: o;
+  margin: 0;
+}
+.board-container {
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 360px;
+  background-color: #333;
+  color: #fff; 
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.board-row {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+
+.square {
+  border: 2px solid #555; 
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+  color: #fff; 
+  background-color: #444; 
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.square:hover {
+  background-color: #666; 
+  transform: scale(1.05); 
+}
+
+.square:active {
+  background-color: #222; 
+}
+
+
+h1, h3, .winner-message {
+  color: #f1f1f1;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.winner-message {
+  font-size: 24px;
+  font-weight: 600;
+  color: #28a745; /* Winning message color */
+}
+
+
+button {
+  background-color: #28a745;
+  color: white;
+  font-size: 18px;
+  padding: 10px 20px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+button:active {
+  background-color: #1e7e34;
+}
+
+
+.winning-square {
+  background-color: #ffeb3b; 
+  color: #525252;
+  transform: scale(1.1); 
+}
+
+@media (max-width: 768px) {
+  .square {
+    height: 80px;
+    width: 80px;
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .square {
+    height: 60px;
+    width: 60px;
+    font-size: 24px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  .winner-message {
+    font-size: 20px;
+  }
+}
